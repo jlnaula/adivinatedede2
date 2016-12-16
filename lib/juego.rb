@@ -11,13 +11,14 @@ class Juego
             @juego[fila] = Array.new(@numColumnas)
             (0.. @numColumnas-1).each do |columna|
                 item = Item.new
-                # @juego[fila][columna] = item
+                @juego[fila][columna] = item
             end
         end
     end
     
     def mostrarJuego
-        "oculto"
+        item = @juego[2][2]
+        item.mostrarItem
     end
     
     def getItem fila, columna

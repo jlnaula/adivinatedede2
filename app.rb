@@ -19,10 +19,10 @@ get '/' do
 end
 
 post '/mostrarItem/:idbutton' do |id|
-  numero = id.to_i
+  numero = id.to_i - 1
   puts "numero =>" + numero.to_s
-  filaSeleccionada = numero / session["numColumnas"] -1
-  columnaSeleccionada = numero % session["numColumnas"] -1
+  filaSeleccionada = numero / session["numColumnas"]
+  columnaSeleccionada = numero % session["numColumnas"]
   puts "filaSeleccionada =>" + filaSeleccionada.to_s
   puts "columnaSeleccionada =>" + columnaSeleccionada.to_s
   session["juego"].getItem(filaSeleccionada, columnaSeleccionada).seleccionarItem

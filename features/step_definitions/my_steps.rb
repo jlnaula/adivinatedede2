@@ -7,7 +7,7 @@ Then(/^debo visualizar "([^"]*)"$/) do |parametro|
 end
 
 Then(/^debo visualizar (\d+) botones$/) do |parametro|
-  find_button('1')
+    find_button('1')
     find_button('2')
     find_button('3')
     find_button('4')
