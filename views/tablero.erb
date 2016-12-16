@@ -1,25 +1,42 @@
 <html>
     <head>
+        <style type="text/css">
+          .boton{
+                font-size:10px;
+                font-family:Verdana,Helvetica;
+                font-weight:bold;
+                color:black;
+        background:#ffffff;
+                border:0px;
+                width:80px;
+                height:19px;
+               }
+        </style>
     </head>
     
     <body >
         <h1 align="center">Adivinatedede</h1>
         <div style="text-align:center;">
-        <form method="POST" action="/marcar/j1">
+        
         <% contador = 1%>
         <% numFilas = session["numFilas"]-1%>
         <% numColumnas = session["numColumnas"]-1%>
-        
+        <table CELLSPACING="0" ALIGN="CENTER">
+        <% juego = session["juego"].mostrarItem%>
         <% (0.. numFilas).each do |i|%>
-            
+            <tr>
             <% (0..numColumnas).each do |j|%>
-                <input type="submit" name="b<%= contador %>" id="b<%= contador %>" value="oculto" />
+                <td>
+                    <form method="POST" action="/mostrarItem/b<%= contador %>" style="width: 50px;">
+                        <input class="boton" type="submit" name="b<%= contador %>" id="b<%= contador %>" value="<%= juego.getItem(i,j).valor %>" />
+                    </form>
+                </td>
                 <% contador +=1%>
             <% end %>
-        <br>
+            </tr>
         <% end %>
         
-        </form>
+        </table>
         </div>
         
     </body>

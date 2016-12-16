@@ -1,8 +1,8 @@
 class Item
     
-    def initialize 
+    def initialize valor = " * "
         @visible = false
-        @valor = "oculto"
+        @valor = valor
     end
     
     def mostrarItem
@@ -10,7 +10,7 @@ class Item
     end
     
     def seleccionarItem
-        @valor = "A"
+        @valor = " A "
     end
     
 end
