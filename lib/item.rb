@@ -1,4 +1,5 @@
 class Item
+    DESACTIVADO = "   "
     OCULTO = " * "
     def initialize valor = OCULTO
         @activado = true
@@ -7,7 +8,9 @@ class Item
     end
     
     def mostrarItem
-        if @visible 
+        if @activado == false
+            DESACTIVADO
+        elsif @visible 
             @valor
         else
             OCULTO

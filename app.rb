@@ -39,6 +39,8 @@ post '/mostrarItem/:idbutton' do |id|
     item1 = session["juego"].getItem(session["fila1"].to_i, session["col1"].to_i)
     item2 = session["juego"].getItem(filaSeleccionada, columnaSeleccionada)
     
+    puts "val1" + item1.getValor
+    puts "val1" + item2.getValor
     if (item1.getValor == item2.getValor)
       item1.desactivarItem
       item2.desactivarItem
