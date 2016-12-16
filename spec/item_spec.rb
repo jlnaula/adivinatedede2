@@ -7,9 +7,15 @@ describe Item do
     end
     
     it "el item debe mostrar el valor que tiene" do
-        item = Item.new
+        item = Item.new " A "
         item.seleccionarItem
         expect(item.mostrarItem).to eq " A "
     end
 
+    it "el item debe ocultarse" do
+        item = Item.new " A "
+        item.seleccionarItem
+        item.resetearItem
+        expect(item.mostrarItem).to eq " * "
+    end
 end

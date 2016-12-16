@@ -11,6 +11,6 @@ describe Juego do
         juego = Juego.new
         item = juego.getItem(2,2)
         item.seleccionarItem
-        expect(item.mostrarItem).to eq " A "
+        expect(item.mostrarItem).to eq " B "
     end
 end

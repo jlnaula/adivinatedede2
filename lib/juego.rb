@@ -10,7 +10,11 @@ class Juego
         (0.. @numFilas-1).each do |fila|
             @juego[fila] = Array.new(@numColumnas)
             (0.. @numColumnas-1).each do |columna|
-                item = Item.new
+                valor = " A "
+                if (columna % 2 == 0)
+                    valor = " B "
+                end
+                item = Item.new valor
                 @juego[fila][columna] = item
             end
         end

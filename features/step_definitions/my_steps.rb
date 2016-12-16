@@ -34,5 +34,27 @@ When(/^selecciono un boton$/) do
 end
 
 Then(/^debo visualizar el item contenido en el boton$/) do
+    find_button('1').value
+end
 
+Given(/^selecciono (\d+) items distintos$/) do |arg1|
+  visit '/'
+  click_button("1")
+  click_button("2")
+end
+
+Then(/^debo visualizar los dos items$/) do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^debo ocultar los dos items despues de (\d+) segundos$/) do |arg1|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Given(/^selecciono (\d+) items iguales$/) do |arg1|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^debo desactivar los dos items despues de (\d+) segundos$/) do |arg1|
+  pending # Write code here that turns the phrase above into concrete actions
 end

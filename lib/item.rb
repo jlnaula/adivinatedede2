@@ -1,16 +1,32 @@
 class Item
-    
-    def initialize valor = " * "
+    OCULTO = " * "
+    def initialize valor = OCULTO
+        @activado = true
         @visible = false
         @valor = valor
     end
     
     def mostrarItem
-        @valor
+        if @visible 
+            @valor
+        else
+            OCULTO
+        end
+    end
+    
+    def getValor 
+        return @valor
     end
     
     def seleccionarItem
-        @valor = " A "
+        @visible = true
     end
     
+    def resetearItem
+        @visible = false
+    end
+    
+    def desactivarItem
+        @activado = false
+    end
 end
