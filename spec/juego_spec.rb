@@ -6,9 +6,9 @@ describe Juego do
         expect(juego.mostrarJuego).to eq "oculto"
     end
 
-    it "debe obtener un valor de un item" do
-        juego = Juego.new
-        juego.getItem 2,2
-        expect(juego.mostrarJuego).to eq " A "
-    end
+    # it "debe obtener un valor de un item" do
+    #     juego = Juego.new
+    #     juego.getItem 2,2
+    #     expect(juego.mostrarJuego).to eq " A "
+    # end
 end
