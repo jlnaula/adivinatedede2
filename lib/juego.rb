@@ -3,10 +3,12 @@
 class Juego
    
    def initialize 
-        @numFilas = 6
-        @numColumnas = 3
+        @numFilas = 3
+        @numColumnas = 6
         
+        @juego = Array.new(@numFilas)
         (0.. @numFilas-1).each do |fila|
+            @juego[fila] = Array.new(@numColumnas)
             (0.. @numColumnas-1).each do |columna|
                 item = Item.new
                 # @juego[fila][columna] = item

@@ -19,8 +19,7 @@ get '/' do
 end
 
 post '/mostrarItem/:idbutton' do |id|
-  numero = id[1, s.length - 1].to_i
-  
+  numero = id.to_i
   puts "numero =>" + numero.to_s
   filaSeleccionada = numero / session["numColumnas"] -1
   columnaSeleccionada = numero % session["numColumnas"] -1

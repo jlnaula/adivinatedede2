@@ -7,30 +7,30 @@ Then(/^debo visualizar "([^"]*)"$/) do |parametro|
 end
 
 Then(/^debo visualizar (\d+) botones$/) do |parametro|
-  find_button('b1')
-    find_button('b2')
-    find_button('b3')
-    find_button('b4')
-    find_button('b5')
-    find_button('b6')
-    find_button('b7')
-    find_button('b8')
-    find_button('b9')
-    find_button('b10')
-    find_button('b11')
-    find_button('b12')
-    find_button('b13')
-    find_button('b14')
-    find_button('b15')
-    find_button('b16')
-    find_button('b17')
-    find_button('b18')
+  find_button('1')
+    find_button('2')
+    find_button('3')
+    find_button('4')
+    find_button('5')
+    find_button('6')
+    find_button('7')
+    find_button('8')
+    find_button('9')
+    find_button('10')
+    find_button('11')
+    find_button('12')
+    find_button('13')
+    find_button('14')
+    find_button('15')
+    find_button('16')
+    find_button('17')
+    find_button('18')
 end
 
 
 When(/^selecciono un boton$/) do
   visit '/'
-  click_button("b1")
+  click_button("1")
 end
 
 Then(/^debo visualizar el item contenido en el boton$/) do

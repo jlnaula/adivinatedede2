@@ -22,13 +22,12 @@
         <% numFilas = session["numFilas"]-1%>
         <% numColumnas = session["numColumnas"]-1%>
         <table CELLSPACING="0" ALIGN="CENTER">
-        <% juego = session["juego"].mostrarItem%>
         <% (0.. numFilas).each do |i|%>
             <tr>
             <% (0..numColumnas).each do |j|%>
                 <td>
                     <form method="POST" action="/mostrarItem/b<%= contador %>" style="width: 50px;">
-                        <input class="boton" type="submit" name="b<%= contador %>" id="b<%= contador %>" value="<%= juego.getItem(i,j).valor %>" />
+                        <input class="boton" type="submit" name="<%= contador %>" id="<%= contador %>" value="oculto" />
                     </form>
                 </td>
                 <% contador +=1%>
