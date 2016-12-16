@@ -7,9 +7,14 @@ Feature:
    Given abro aplicacion
    Then debo visualizar "Adivinatedede"
    
-  Scenario: Debe visualizar un tablero de 3x6 items
+ Scenario: Debe visualizar un tablero de 3x6 items
     Given abro aplicacion
     Then debo visualizar 18 botones
+   
+Scenario: Debe visualizar el item contenido en el boton
+    Given abro aplicacion
+    When selecciono un boton
+    Then debo visualizar el item contenido en el boton
    
    
    
